@@ -62,7 +62,7 @@ h1 {
     
 }
 
-  
+
  a:link {
     color: white;
   }
@@ -79,4 +79,10 @@ h1 {
     color: red;
   }
 
-  /* Unfortunately, I couldn't do anything with the alignment of my content.*/
+  .experienceSection { 
+    width: 90%; 
+    border: 2px solid white; 
+    padding: 10px; 
+    margin: 0 auto; 
+    font-style: italic; 
+    } 

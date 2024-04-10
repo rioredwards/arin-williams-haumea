@@ -86,3 +86,21 @@ h1 {
     margin: 0 auto; 
     font-style: italic; 
     } 
+
+    .experienceContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .connectContainer {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+    }
+   
+    .connectContainer div {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      flex: 1;
+    }

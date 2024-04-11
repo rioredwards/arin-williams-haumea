@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 h1 {
     color: white;
     font-family: "Poppins", sans-serif;
@@ -10,22 +14,16 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+
   }
 
-  h3 {
+  h3, h4 {
     color: white;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
   }
-
-  h4 {
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
+ 
   p {
     color: white;
     font-family: "Poppins", sans-serif;
@@ -38,17 +36,31 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    list-style-type: none;
 }
-  
-* {
-    color: teal;
-    background-color: black;
-  }
 
   img {
-    width: 15%;
+    width: 40%;
     height: auto;
     border: 3px solid white;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
   }
 
   
@@ -59,9 +71,7 @@ h1 {
     padding: 30px;
     margin: 20px; 
     font-style: italic;
-    
 }
-
 
  a:link {
     color: white;
@@ -92,15 +102,29 @@ h1 {
       flex-direction: column;
     }
 
-    .connectContainer {
-      display: flex;
-      flex-direction: row;
-      margin: 0 auto;
-    }
-   
-    .connectContainer div {
+    .connectSection {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      flex: 1;
     }
+   
+    .connectSection ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      flex: 1;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      padding: 10px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+    }
+
+    /* 
+    INFO I DON'T WANT TO LOSE
+    nav ul {
+      display: flex;
+      border: 1px solid red;
+    } */ 

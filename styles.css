@@ -1,5 +1,8 @@
 body {
   background-color: black;
+  padding: 0 20px;
+  border: 1px solid red;
+  margin: 0;
 }
 
 h1 {
@@ -40,29 +43,29 @@ h1 {
 }
 
   img {
-    width: 40%;
+    width: 250px;
     height: auto;
     border: 3px solid white;
   }
 
   nav {
     display: flex;
+    justify-content: center;
   }
 
   nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    padding: 10px;
+    padding-left: 0;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
     font-style: normal;
-
   }
 
+  nav ul li {
+    font-size: 14px;
+  }
   
 #Experience h3 {
     /* margin: auto; --> */
@@ -121,6 +124,22 @@ h1 {
       font-family: "Poppins", sans-serif;
       font-style: normal;
     }
+
+    @media screen and (max-width: 360px) {
+      nav ul {
+        flex-direction: column;
+      }
+      img {
+        width: 150px;
+      }
+    
+    }
+
+    /*@media screen and (max-width: 800px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }*/
 
     /* 
     INFO I DON'T WANT TO LOSE

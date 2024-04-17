@@ -14,10 +14,20 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+       <li><a href=#About title="About">About</a></li>
+       <li><a href=#Experience title="Experience">Experience</a></li>
+       <li><a href=#Skills title="Skills">Skills</a></li>
+       <li><a href=#Projects title="Projects">Projects</a></li>
+       <li><a href=#Connect title="Connect">Connect</a></li>
+        </a>
+      </ul>
+    </nav>
     <h1>Arin Williams</h1>
     <img src="arin-williams-photo.jpeg" alt="Headshot Photo of Arin Williams" />
 
-    <section id="About">
+    <section id="About" class="aboutSection">
       <h2>About</h2>
       <p>
         I'm an experienced technologist and board director with expertise in
@@ -27,8 +37,20 @@
       </p>
     </section>
 
+    <section id="Skills" class="skillsSection">
+      <h2>Skills Heading</h2>
+      <h3>
+       Skills sub heading
+        <p>
+         Skills details
+        </p>
+      </h3>
+      </section>
+
     <section id="Experience" class="experienceSection">
+      <div class="experienceContainer"> <!-- start exp container div-->
       <h2>Experience</h2>
+      <div class="job-one"> <!-- start job div-->
       <h3>
         Product Manager, Comcast (2022 - Present)
         <p>
@@ -36,7 +58,9 @@
           software engineers, architects, and designers.
         </p>
       </h3>
+      </div> <!-- end job div-->
 
+      <div class="job-two"> <!-- start job div-->
       <h3>
         Co-Founder, Rangle News Inc. (2017 - 2022)
         <p>
@@ -45,29 +69,33 @@
           multiple software engineers and designers.
         </p>
       </h3>
-
+    </div> <!-- end job div-->
+      <div class="job-three"> <!-- start job div-->
       <h3>
         Journalist, Nexstar Broadcasting (2008 - 2022)
         <p>Shot, edited, and gathered news content for local newscasts.</p>
       </h3>
+    </div> <!-- end job div-->
+  </div> <!-- end exp container div-->
     </section>
 
-    <section id="Connect">
+    <section id="Projects" class="projectsSection">
+      <h2>Projects Heading</h2>
+      <h3>
+       Projects sub heading
+        <p>
+         Projects details
+        </p>
+      </h3>
+      </section>
+
+    <section id="Connect" class="connectSection">
       <h2>Connect</h2>
       <ul>
         <li><a href="https://LinkedIn.com/in/arinwilliams">LinkedIn</a></li>
-        <li>
-          <a href="https://github.com/arinwilliams/arin-williams-haumea"
-            >GitHub</a
-          >
+        <li><a href="https://github.com/arinwilliams/arin-williams-haumea">GitHub</a>
         </li>
       </ul>
     </section>
   </body>
 </html>
-
-<!--  <ul>
-    <li>Startup Co-Founder</li>
-    <li>Product Manager</li>
-    <li>Journalist</li>
-</ul> -->

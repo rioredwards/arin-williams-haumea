@@ -52,6 +52,9 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.footerSection {
+  text-align: center;
+}
 
 /* 
 Note to Mentor: Not sure how CSS code stil works without this part

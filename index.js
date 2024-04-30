@@ -32,7 +32,7 @@ for (let i = 0; i < skills.length; i++) {
 /* SKILLS */
 
 //Create a variable named today and assign it a new date object
-const currentDate = new Date('April 25, 2024')
+const currentDate = new Date()
 
 // Create a variable named thisYear and assign it the current year - use getFullYear
 const thisYear = currentDate.getFullYear();
@@ -44,7 +44,7 @@ let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
 
 // Set the inner HTML of copyright element to display my name and the current year
-copyright.innerHTML = `\u00A9, Arin Williams ${thisYear}`;
+copyright.innerHTML = `\u00A9 Arin Williams, ${thisYear}`;
 
 // Append the footer element to the body
 footer.appendChild(copyright);

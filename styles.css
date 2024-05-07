@@ -44,6 +44,53 @@ li {
   list-style-type: none;
 }
 
+#messages {
+  color: white;
+  font-family: "Poppins", sans-serif; margin-top: 20px;
+  padding: 20px;
+  background-color: #333333; /* Dark gray-ish black background */
+  color: #fff; /* White text labels */
+  border-radius: 8px;
+
+}
+
+#messageForm {
+  color: white;
+  font-family: "Poppins", sans-serif; margin-top: 20px;
+  padding: 20px;
+  background-color: #333333; /* Dark gray-ish black background */
+  color: #fff; /* White text labels */
+  border-radius: 8px;
+
+}
+
+#messageForm input[type="text"],
+#messageForm input[type="email"],
+#messageForm textarea {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fff; /* White border for text fields */
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #444; /* Dark grey background for text fields */
+  color: #fff; /* White text for text fields */
+
+}
+
+#messageForm button[type="submit"] {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+  background-color: teal; /* teal submit button */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /*rounding around button corners*/
+ 
+}
+
 img {
   width: 250px;
   height: auto;

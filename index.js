@@ -104,3 +104,32 @@ messageForm.addEventListener("submit", (event) => {
   //reset the form inputs
   messageForm.reset();
 });
+
+/* Hide and Display mobile navbar menu */
+const navBar = document.querySelector("#navbar");
+const mobileMenuButton = document.querySelector("#mobile-menu-button");
+const openMobileMenuIcon = mobileMenuButton.querySelector("#open-mobile-menu-icon");
+const closeMobileMenuIcon = mobileMenuButton.querySelector("#close-mobile-menu-icon");
+const navLinks = navBar.querySelectorAll("a");
+
+// Hide and display mobile menu when user clicks on the mobile menu button
+mobileMenuButton.addEventListener("click", function () {
+  if (navBar.classList.contains("hide-mobile")) {
+    // Show mobile menu
+    navBar.classList.remove("hide-mobile");
+    openMobileMenuIcon.classList.add("hidden");
+    closeMobileMenuIcon.classList.remove("hidden");
+  } else {
+    // Hide mobile menu
+    navBar.classList.add("hide-mobile");
+    openMobileMenuIcon.classList.remove("hidden");
+    closeMobileMenuIcon.classList.add("hidden");
+  }
+});
+
+// Hide mobile menu when user clicks on a link
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navBar.classList.add("hide-mobile");
+  });
+});

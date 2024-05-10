@@ -14,18 +14,39 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-       <li><a href=#About title="About">About</a></li>
-       <li><a href=#Experience title="Experience">Experience</a></li>
-       <li><a href=#Skills title="Skills">Skills</a></li>
-       <li><a href=#Projects title="Projects">Projects</a></li>
-       <li><a href=#Connect title="Connect">Connect</a></li>
-        </a>
-      </ul>
-    </nav>
-    <h1>Arin Williams</h1>
-    <img src="arin-williams-photo.jpeg" alt="Headshot Photo of Arin Williams" />
+    <header>
+      <div id="header-content">
+        <nav id="navbar" class="hide-mobile">
+          <ul>
+            <li><a href=#About title="About" >ABOUT</a></li>
+            <li><a href=#Experience title="Experience" >EXPERIENCE</a></li>
+            <li><a href=#Skills title="Skills" >SKILLS</a></li>
+            <li><a href=#Projects title="Projects" >PROJECTS</a></li>
+          </ul>
+        </nav>
+        <ul id="social-links">
+          <li>
+            <a href="https://LinkedIn.com/in/arinwilliams" target="_blank">
+              <img src="images/LinkedIn-Logo.svg" alt="LinkedIn">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/arinwilliams/arin-williams-haumea" target="_blank">
+              <img src="images/GitHub-Logo.svg" alt="GitHub">
+            </a>
+          </li>
+        </ul>
+        <button id="mobile-menu-button">
+          <img src="images/Hamburger-Menu-Icon.svg" alt="Open Menu" id="open-mobile-menu-icon">
+          <img src="images/Close-Icon.svg" alt="Close Menu" id="close-mobile-menu-icon" class="hidden">
+        </button>
+      </div>
+    </header>
+    <section id="hero-section">
+      <div id="hero-border"></div>
+      <h1>Arin Williams</h1>
+      <img src="images/arin-williams-photo.jpeg" alt="Headshot Photo of Arin Williams" id="headshot"/>
+    </section>
 
     <section id="About" class="aboutSection">
       <h2>About</h2>
@@ -39,58 +60,45 @@
 
     <section id="Experience" class="experienceSection">
       <div class="experienceContainer"> <!-- start exp container div-->
-      <h2>Experience</h2>
-      <div class="job-one"> <!-- start job div-->
-      <h3>
-        Product Manager, Comcast (2022 - Present)
-        <p>
-          Responsible for profiles & personalization. Led a team that included
-          software engineers, architects, and designers.
-        </p>
-      </h3>
-      </div> <!-- end job div-->
+        <h2>Experience</h2>
+        <div class="job"> <!-- start job div-->
+          <div class="job-heading">
+            <h3>Product Manager, Comcast</h3>
+            <p>2022 - Present</p>
+          </div>
+          <p>
+            Responsible for profiles & personalization. Led a team that included
+            software engineers, architects, and designers.
+          </p>
+        </div> <!-- end job div-->
 
-      <div class="job-two"> <!-- start job div-->
-      <h3>
-        Co-Founder, Rangle News Inc. (2017 - 2022)
-        <p>
-          Co-founded a compay that helps news organizations reduce editoral
-          expenses by crowdsourcing news content. Led a team that included
-          multiple software engineers and designers.
-        </p>
-      </h3>
-    </div> <!-- end job div-->
-      <div class="job-three"> <!-- start job div-->
-      <h3>
-        Journalist, Nexstar Broadcasting (2008 - 2022)
-        <p>Shot, edited, and gathered news content for local newscasts.</p>
-      </h3>
-    </div> <!-- end job div-->
-  </div> <!-- end exp container div-->
+        <div class="job"> <!-- start job div-->
+          <div class="job-heading">
+            <h3>Co-Founder, Rangle News Inc.</h3>
+            <p>2017 - 2022</p>
+          </div>
+          <p>
+            Co-founded a compay that helps news organizations reduce editoral
+            expenses by crowdsourcing news content. Led a team that included
+            multiple software engineers and designers.
+          </p>
+        </div> <!-- end job div-->
+        <div class="job"> <!-- start job div-->
+          <div class="job-heading">
+            <h3>Journalist, Nexstar Broadcasting</h3>
+            <p>2008 - 2022</p>
+          </div>
+          <p>Shot, edited, and gathered news content for local newscasts.</p>
+        </div> <!-- end job div-->
+      </div> <!-- end exp container div-->
     </section>
 
     <section id="Projects" class="projectsSection">
-      <h2>Projects Heading</h2>
-      <h3>
-       Projects sub heading
-        <p>
-         Projects details
-        </p>
-      </h3>
-      </section>
-      <section id="Skills" class="skillsSection">
-        <h2>Skills</h2>
-           <ul></ul>
-          </p>
-        </h3>
-        </section>
-    <section id="Connect" class="connectSection">
-      <h2>Connect</h2>
-      <ul>
-        <li><a href="https://LinkedIn.com/in/arinwilliams">LinkedIn</a></li>
-        <li><a href="https://github.com/arinwilliams/arin-williams-haumea">GitHub</a>
-        </li>
-      </ul>
+      <h2>Projects</h2>
+    </section>
+    <section id="Skills" class="skillsSection">
+      <h2>Skills</h2>
+         <ul></ul>
     </section>
     <section id="messageForm">
       <h2>Leave a Message</h2>

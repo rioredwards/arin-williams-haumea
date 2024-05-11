@@ -1,44 +1,58 @@
+:root {
+  --text-primary: #f7f7f7;
+  --text-secondary: #dcdcdc;
+  --text-tertiary: #a4a4a4;
+  --accent-color: #008080;
+  --accent-color-hover: #009090;
+  --background-primary: #111111;
+  --background-secondary: #272727;
+  --background-hover: #434343;
+  --header-color: #000000b7;
+  --border-color-primary: #3a3a3a;
+  --border-color-secondary: #b8b8b8;
+}
+
 /* This selects all elements and sets some sensible default properties */
 * {
   box-sizing: border-box; /* Make width and height properties on elements more intuitive  */
   padding: 0; /* This resets the default paddings to 0 */
   margin: 0; /* This resets the default margins to 0 */
+  transition: all 0.2s;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #111111;
+  background-color: var(--background-primary);
 }
 
 body {
-  background-color: #111111;
+  background-color: var(--background-primary);
   /* border: 1px solid red; <-- this is how I can see border visually*/
   padding-top: 4rem;
 }
 
 h1 {
-  color: #dcdcdc;
+  color: var(--text-secondary);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1rem;
-  background-color: #111111;
-  border: 1px solid #3a3a3a;
+  background-color: var(--background-primary);
+  border: 1px solid var(--border-color-primary);
   border-radius: 1rem;
   z-index: 1;
   padding: 0 2rem;
   pointer-events: none;
-  transition: all 0.2s;
 }
 
 #hero-section:hover h1 {
-  border-color: teal;
+  border-color: var(--accent-color);
 }
 
 h2 {
-  color: teal;
+  color: var(--accent-color);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -47,40 +61,42 @@ h2 {
 
 h3,
 h4 {
-  color: #dcdcdc;
+  color: var(--text-secondary);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 p {
-  color: #a4a4a4;
+  color: var(--text-tertiary);
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-size: 1rem;
 }
 
 li {
-  color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   list-style-type: none;
 }
 
-section, #messageForm, #messages {
+section,
+#messageForm,
+#messages {
   max-width: 60rem;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
   padding: 0 20px;
+  transition: boder 0s;
 }
 
 #About:hover,
 #Experience:hover,
 #Projects:hover,
 #Skills:hover {
-  border-left: 1px solid teal;
+  border-left: 1px solid var(--accent-color);
   transform: translateX(-1px);
 }
 
@@ -89,27 +105,26 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid #3a3a3a;
-  background-color: #000000b7;
+  border-bottom: 1px solid var(--border-color-primary);
+  background-color: var(--header-color);
   backdrop-filter: blur(10px);
   z-index: 2;
 }
 
 #hero-border {
   position: absolute;
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--border-color-primary);
   border-radius: 8px;
   width: 100%;
   max-width: 58rem;
   height: 20rem;
   transform: translateY(2rem);
-  background-color: #111111;
+  background-color: var(--background-primary);
   pointer-events: none;
-  transition: all 0.2s;
 }
 
 #hero-section:hover #hero-border {
-  border: 1px solid teal;
+  border: 1px solid var(--accent-color);
 }
 
 #header-content {
@@ -137,14 +152,13 @@ header a {
   text-decoration: none;
   height: 100%;
   padding: 0.5rem 1rem;
-  border-left: 1px solid #272727;
-  border-right: 1px solid #272727;
-  transition: all 0.5s;
+  border-left: 1px solid var(--background-secondary);
+  border-right: 1px solid var(--background-secondary);
 }
 
 header a:hover {
-  border-left: 1px solid teal;
-  border-right: 1px solid teal;
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
 
 #social-links {
@@ -181,65 +195,63 @@ header a:hover {
 }
 
 #messages {
-  color: white;
+  color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   padding: 20px;
-  background-color: #272727; /* Dark gray-ish black background */
-  color: #fff; /* White text labels */
+  background-color: var(--background-secondary); /* Dark gray-ish black background */
   border-radius: 8px;
 }
 
 #messageForm {
-  color: white;
+  color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   padding: 20px;
-  background-color: #272727; /* Dark gray-ish black background */
+  background-color: var(--background-secondary); /* Dark gray-ish black background */
   border-radius: 8px;
 }
 
-#messageForm input[type="text"],
-#messageForm input[type="email"],
+#messageForm input,
 #messageForm textarea {
   font-family: "Poppins", sans-serif;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ffffff6b;
+  border: 1px solid var(--border-color-secondary);
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: #444;
-  color: #fff;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
 }
 
-input:hover,
-textarea:hover {
-  background-color: #4d4d4d;
+#messageForm input:hover,
+#messageForm textarea:hover {
+  background-color: var(--background-hover);
 }
 
-input:focus-visible,
-textarea:focus-visible {
-  outline: 1px solid teal;
+#messageForm input:focus-visible,
+#messageForm textarea:focus-visible {
+  outline: 1px solid var(--accent-color);
 }
 
 #messageForm button[type="submit"] {
-  color: white;
+  color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   padding: 10px 20px;
-  background-color: teal; /* teal submit button */
-  color: #fff;
+  background-color: var(--accent-color); /* var(--accent-color) submit button */
+  color: var(--text-primary);
   border: none;
   border-radius: 5px; /*rounding around button corners*/
   cursor: pointer;
 }
 
 #messageForm button[type="submit"]:hover {
-  background-color: rgb(0, 107, 107);
+  background-color: var(--accent-color-hover);
 }
 
 #headshot {
   width: 250px;
   height: auto;
-  border: 3px solid #272727;
+  border: 3px solid var(--background-secondary);
   display: block;
   margin: auto;
   z-index: 1;
@@ -251,11 +263,11 @@ textarea:focus-visible {
   margin-top: 2rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  border-top: 1px solid #272727;
+  border-top: 1px solid var(--background-secondary);
 }
 
 .footerSection p {
-  color: #dcdcdc;
+  color: var(--text-secondary);
 }
 
 /* 
@@ -268,17 +280,16 @@ nav {
   */
 
 .job {
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--border-color-primary);
   border-radius: 8px;
   padding: 1rem;
   margin: auto;
   margin-bottom: 1rem;
-  transition: all 0.2s;
-  background-color: #111111;
+  background-color: var(--background-primary);
 }
 
 .job:hover {
-  border-color: teal;
+  border-color: var(--accent-color);
 }
 
 .job-heading {
@@ -296,24 +307,23 @@ nav {
 }
 
 #Skills ul li {
-  background-color: #272727;
-  border-radius: .4rem;
-  color: white;
+  background-color: var(--background-secondary);
+  border-radius: 0.4rem;
+  color: var(--text-primary);
   padding: 0.5rem;
   cursor: pointer;
 }
 
 #Skills ul li:hover {
-  background-color: #303030;
+  background-color: var(--background-hover);
 }
 
 .job:hover h3 {
-  color: teal;
+  color: var(--accent-color);
 }
 
 .job-heading h3 {
   font-weight: semibold;
-  transition: all 0.2s;
 }
 
 .job-heading p {
@@ -321,15 +331,11 @@ nav {
 }
 
 a {
-  color: white;
-}
-
-a:visited {
-  color: gray;
+  color: var(--text-primary);
 }
 
 a:hover {
-  color: teal;
+  color: var(--accent-color);
 }
 
 .connectSection {
@@ -358,12 +364,11 @@ a:hover {
 }
 
 .project {
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--border-color-primary);
   border-radius: 8px;
   margin: auto;
   margin-bottom: 1rem;
-  transition: all 0.2s;
-  background-color: #111111;
+  background-color: var(--background-primary);
 }
 
 .project-header {
@@ -381,12 +386,11 @@ a:hover {
 }
 
 .project:hover {
-  border-color: teal;
+  border-color: var(--accent-color);
 }
 
 .project:hover h3 {
-  color: teal;
-  transition: all 0.2s;
+  color: var(--accent-color);
 }
 
 .project a {
@@ -413,17 +417,18 @@ Tablet Styles
     cursor: pointer;
   }
 
-  #close-mobile-menu-icon, 
+  #close-mobile-menu-icon,
   #open-mobile-menu-icon {
     height: 1.2rem;
   }
-  
+
   #close-mobile-menu-icon {
     padding-right: 4px;
   }
 
   #header-content {
-    background-color: black;
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--border-color-primary);
   }
 
   #navbar {
@@ -436,13 +441,13 @@ Tablet Styles
   #navbar.hide-mobile {
     display: none;
   }
-  
+
   #navbar ul {
     border: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: var(--background-secondary);
     z-index: 3;
   }
 
@@ -453,13 +458,13 @@ Tablet Styles
   #navbar a {
     display: block;
     border: none;
-    border-bottom: 1px solid #272727;
+    border-bottom: 1px solid var(--border-color-primary);
     width: 100%;
     text-align: center;
   }
 
   #navbar a:hover {
-    background-color: #272727;
+    background-color: var(--background-hover);
   }
 
   h1 {
@@ -491,12 +496,10 @@ Mobile Styles
   }
 }
 
-
-  
-
 /* 
     INFO I DON'T WANT TO LOSE
     nav ul {
       display: flex;
       border: 1px solid red;
     }
+*/

@@ -109,10 +109,10 @@ messageForm.addEventListener("submit", (event) => {
 const projectsSection = document.querySelector("#Projects");
 const projectsList = projectsSection.querySelector("ul");
 
-fetch("https://api.github.com/users/arinwilliams/repos")
+fetch("https://api.github.com/users/arinliams/repos")
   .then((res) => {
     if (!res.ok) {
-      throw new Error("Something went wrong 😢");
+      throw new Error("Can't access Projects. Please try again later.");
     }
     return res.json();
   })

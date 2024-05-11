@@ -105,6 +105,62 @@ messageForm.addEventListener("submit", (event) => {
   messageForm.reset();
 });
 
+/* PROJECTS */
+const projectsSection = document.querySelector("#Projects");
+const projectsList = projectsSection.querySelector("ul");
+
+fetch("https://api.github.com/users/arinwilliams/repos")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Something went wrong 😢");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    const maxProjects = 3;
+    const loopLength = Math.min(data.length, maxProjects);
+    for (let i = 0; i < loopLength; i++) {
+      const projectContainer = createProject(data[i]);
+      projectsList.appendChild(projectContainer);
+    }
+  })
+  .catch((error) => {
+    const errorMsg = document.createElement("p");
+    errorMsg.innerText = error.message;
+    errorMsg.classList.add("error");
+    projectsSection.appendChild(errorMsg);
+    console.error(error);
+  });
+
+function createProject(project) {
+  const projectContainer = document.createElement("li");
+  projectContainer.classList.add("project");
+
+  const projectLink = document.createElement("a");
+  projectLink.target = "_blank";
+  projectLink.href = project.html_url;
+
+  const projectHeader = document.createElement("div");
+  projectHeader.classList.add("project-header");
+  const projectName = document.createElement("h3");
+  projectName.innerText = project.name;
+  const projectDate = document.createElement("p");
+  projectDate.innerText = new Date(project.updated_at).getFullYear();
+
+  projectHeader.appendChild(projectName);
+  projectHeader.appendChild(projectDate);
+  projectLink.appendChild(projectHeader);
+
+  if (project.description) {
+    const projectDescription = document.createElement("p");
+    projectDescription.innerText = project.description;
+    projectLink.appendChild(projectDescription);
+  }
+
+  projectContainer.appendChild(projectLink);
+  return projectContainer;
+}
+
 /* Hide and Display mobile navbar menu */
 const navBar = document.querySelector("#navbar");
 const mobileMenuButton = document.querySelector("#mobile-menu-button");

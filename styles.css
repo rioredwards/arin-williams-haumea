@@ -320,8 +320,8 @@ nav {
   font-style: italic;
 }
 
-a:link {
-  color: rgb(224, 224, 224);
+a {
+  color: white;
 }
 
 a:visited {
@@ -330,10 +330,6 @@ a:visited {
 
 a:hover {
   color: teal;
-}
-
-a:active {
-  color: red;
 }
 
 .connectSection {
@@ -359,6 +355,45 @@ a:active {
   background-color: transparent;
   border: none;
   display: none;
+}
+
+.project {
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  margin: auto;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+  background-color: #111111;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  font-weight: semibold;
+}
+
+.project-header p {
+  font-style: italic;
+}
+
+.project:hover {
+  border-color: teal;
+}
+
+.project:hover h3 {
+  color: teal;
+  transition: all 0.2s;
+}
+
+.project a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 1rem;
 }
 
 .hidden {
@@ -446,6 +481,11 @@ Mobile Styles
   }
 
   .job-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-header {
     flex-direction: column;
     align-items: flex-start;
   }

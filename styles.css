@@ -37,6 +37,7 @@
   box-sizing: border-box; /* Make width and height properties on elements more intuitive  */
   padding: 0; /* This resets the default paddings to 0 */
   margin: 0; /* This resets the default margins to 0 */
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s; /* This adds a smooth transition to color, background-color, and border-color */
 }
 
 html {
@@ -183,7 +184,7 @@ header a:hover {
   cursor: pointer;
   background-color: transparent;
   color: var(--text-secondary);
-  padding: 0 1rem;
+  width: calc(var(--header-height) * 1.1);
   border: none;
   height: 100%;
   border-left: 1px solid var(--background-secondary);

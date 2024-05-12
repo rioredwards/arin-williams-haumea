@@ -189,3 +189,36 @@ navLinks.forEach((link) => {
     navBar.classList.add("hide-mobile");
   });
 });
+
+/* Light-Dark Mode Button */
+const lightDarkModeButton = document.querySelector("#light-dark-mode-toggle-button");
+const lightModeIcon = lightDarkModeButton.querySelector("#light-mode-icon");
+const darkModeIcon = lightDarkModeButton.querySelector("#dark-mode-icon");
+let currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "dark") {
+    lightModeIcon.classList.add("hidden");
+    darkModeIcon.classList.remove("hidden");
+  }
+}
+
+lightDarkModeButton.addEventListener("click", switchTheme);
+
+function switchTheme() {
+  if (currentTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    currentTheme = "light";
+    lightModeIcon.classList.remove("hidden");
+    darkModeIcon.classList.add("hidden");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    currentTheme = "dark";
+    lightModeIcon.classList.add("hidden");
+    darkModeIcon.classList.remove("hidden");
+  }
+}

@@ -1,5 +1,22 @@
 :root {
   /* Colors */
+  --text-primary: #111111;
+  --text-secondary: #3a3a3a;
+  --text-tertiary: #6e6e6e;
+  --accent-color: #008080;
+  --accent-color-hover: #009090;
+  --background-primary: #f7f7f7;
+  --background-secondary: #dcdcdc;
+  --background-hover: #b8b8b8;
+  --header-color: #000000b8;
+  --border-color-primary: #a4a4a4;
+  --border-color-secondary: #434343;
+
+  /* Sizes */
+  --header-height: 3rem;
+}
+
+[data-theme="dark"] {
   --text-primary: #f7f7f7;
   --text-secondary: #dcdcdc;
   --text-tertiary: #a4a4a4;
@@ -11,9 +28,6 @@
   --header-color: #000000b7;
   --border-color-primary: #3a3a3a;
   --border-color-secondary: #b8b8b8;
-
-  /* Sizes */
-  --header-height: 3rem;
 }
 
 /* This selects all elements and sets some sensible default properties */

@@ -3,8 +3,9 @@
   --text-primary: #111111;
   --text-secondary: #3a3a3a;
   --text-tertiary: #6e6e6e;
-  --accent-color: #00636a;
-  --accent-color-hover: #007179;
+  --text-opposite: #f7f7f7;
+  --accent-color: #00939d;
+  --accent-color-hover: #006168;
   --background-primary: #f7f7f7;
   --background-secondary: #dcdcdc;
   --background-hover: #b8b8b8;
@@ -20,6 +21,7 @@
   --text-primary: #f7f7f7;
   --text-secondary: #dcdcdc;
   --text-tertiary: #a4a4a4;
+  --text-opposite: #111111;
   --accent-color: #009292;
   --accent-color-hover: #009090;
   --background-primary: #111111;
@@ -292,11 +294,10 @@ header a:hover {
 }
 
 #messageForm button[type="submit"] {
-  color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   padding: 10px 20px;
+  color: var(--text-opposite);
   background-color: var(--accent-color); /* var(--accent-color) submit button */
-  color: var(--text-primary);
   border: none;
   border-radius: 5px; /*rounding around button corners*/
   cursor: pointer;

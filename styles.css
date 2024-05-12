@@ -3,13 +3,13 @@
   --text-primary: #111111;
   --text-secondary: #3a3a3a;
   --text-tertiary: #6e6e6e;
-  --accent-color: #008080;
-  --accent-color-hover: #009090;
+  --accent-color: #00636a;
+  --accent-color-hover: #007179;
   --background-primary: #f7f7f7;
   --background-secondary: #dcdcdc;
   --background-hover: #b8b8b8;
-  --header-color: #000000b8;
-  --border-color-primary: #a4a4a4;
+  --header-color: #e1e1e1b5;
+  --border-color-primary: #939393;
   --border-color-secondary: #434343;
 
   /* Sizes */
@@ -20,7 +20,7 @@
   --text-primary: #f7f7f7;
   --text-secondary: #dcdcdc;
   --text-tertiary: #a4a4a4;
-  --accent-color: #008080;
+  --accent-color: #009292;
   --accent-color-hover: #009090;
   --background-primary: #111111;
   --background-secondary: #272727;
@@ -35,7 +35,6 @@
   box-sizing: border-box; /* Make width and height properties on elements more intuitive  */
   padding: 0; /* This resets the default paddings to 0 */
   margin: 0; /* This resets the default margins to 0 */
-  transition: all 0.2s;
 }
 
 html {
@@ -159,13 +158,20 @@ header a:hover {
   justify-content: center;
 }
 
-#social-links img {
-  height: calc(var(--header-height) * 0.5);
-  filter: brightness(0.9);
+.fa-solid,
+.fa-brands {
+  color: var(--text-primary);
 }
 
-#social-links img:hover {
-  filter: brightness(1.2);
+#header-content a:hover .fa-solid,
+#header-content button:hover .fa-solid,
+#header-content a:hover .fa-brands {
+  color: var(--accent-color);
+}
+
+#header-content .fa-solid,
+#header-content .fa-brands {
+  font-size: calc(var(--header-height) * 0.5);
 }
 
 #light-dark-mode-toggle-button {
@@ -175,7 +181,7 @@ header a:hover {
   cursor: pointer;
   background-color: transparent;
   color: var(--text-secondary);
-  padding: 0 0.2rem;
+  padding: 0 1rem;
   border: none;
   height: 100%;
   border-left: 1px solid var(--background-secondary);
@@ -185,10 +191,6 @@ header a:hover {
 #light-dark-mode-toggle-button:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-#light-dark-mode-toggle-button svg {
-  height: calc(var(--header-height) * 0.5);
 }
 
 #hero-section {
@@ -234,6 +236,16 @@ header a:hover {
 
 #hero-section:hover #hero-border {
   border: 1px solid var(--accent-color);
+}
+
+#headshot {
+  width: 250px;
+  height: auto;
+  border: 3px solid var(--background-secondary);
+  display: block;
+  margin: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
 #About {
@@ -292,16 +304,6 @@ header a:hover {
 
 #messageForm button[type="submit"]:hover {
   background-color: var(--accent-color-hover);
-}
-
-#headshot {
-  width: 250px;
-  height: auto;
-  border: 3px solid var(--background-secondary);
-  display: block;
-  margin: auto;
-  z-index: 1;
-  pointer-events: none;
 }
 
 .footerSection {
@@ -465,18 +467,8 @@ Tablet Styles
     cursor: pointer;
   }
 
-  #close-mobile-menu-icon,
-  #open-mobile-menu-icon {
-    height: calc(var(--header-height) * 0.4);
-  }
-
-  #close-mobile-menu-icon {
-    padding-right: 4px;
-  }
-
   #header-content {
     background-color: var(--background-secondary);
-    border-bottom: 1px solid var(--border-color-primary);
   }
 
   #social-links {

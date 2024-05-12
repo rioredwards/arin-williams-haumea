@@ -164,8 +164,7 @@ function createProject(project) {
 /* Hide and Display mobile navbar menu */
 const navBar = document.querySelector("#navbar");
 const mobileMenuButton = document.querySelector("#mobile-menu-button");
-const openMobileMenuIcon = mobileMenuButton.querySelector("#open-mobile-menu-icon");
-const closeMobileMenuIcon = mobileMenuButton.querySelector("#close-mobile-menu-icon");
+const mobileMenuIcon = mobileMenuButton.querySelector("i");
 const navLinks = navBar.querySelectorAll("a");
 
 // Hide and display mobile menu when user clicks on the mobile menu button
@@ -173,13 +172,13 @@ mobileMenuButton.addEventListener("click", function () {
   if (navBar.classList.contains("hide-mobile")) {
     // Show mobile menu
     navBar.classList.remove("hide-mobile");
-    openMobileMenuIcon.classList.add("hidden");
-    closeMobileMenuIcon.classList.remove("hidden");
+    mobileMenuIcon.classList.remove("fa-bars");
+    mobileMenuIcon.classList.add("fa-times");
   } else {
     // Hide mobile menu
     navBar.classList.add("hide-mobile");
-    openMobileMenuIcon.classList.remove("hidden");
-    closeMobileMenuIcon.classList.add("hidden");
+    mobileMenuIcon.classList.remove("fa-times");
+    mobileMenuIcon.classList.add("fa-bars");
   }
 });
 
@@ -192,16 +191,15 @@ navLinks.forEach((link) => {
 
 /* Light-Dark Mode Button */
 const lightDarkModeButton = document.querySelector("#light-dark-mode-toggle-button");
-const lightModeIcon = lightDarkModeButton.querySelector("#light-mode-icon");
-const darkModeIcon = lightDarkModeButton.querySelector("#dark-mode-icon");
+const lightDarkModeIcon = lightDarkModeButton.querySelector("i");
 let currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
 
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
 
   if (currentTheme === "dark") {
-    lightModeIcon.classList.add("hidden");
-    darkModeIcon.classList.remove("hidden");
+    lightDarkModeIcon.classList.remove("fa-moon");
+    lightDarkModeIcon.classList.add("fa-sun");
   }
 }
 
@@ -212,13 +210,13 @@ function switchTheme() {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
     currentTheme = "light";
-    lightModeIcon.classList.remove("hidden");
-    darkModeIcon.classList.add("hidden");
+    lightDarkModeIcon.classList.remove("fa-sun");
+    lightDarkModeIcon.classList.add("fa-moon");
   } else {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
     currentTheme = "dark";
-    lightModeIcon.classList.add("hidden");
-    darkModeIcon.classList.remove("hidden");
+    lightDarkModeIcon.classList.remove("fa-moon");
+    lightDarkModeIcon.classList.add("fa-sun");
   }
 }

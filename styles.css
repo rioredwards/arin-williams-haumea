@@ -6,12 +6,12 @@
   --text-opposite: #f7f7f7;
   --accent-color: #00939d;
   --accent-color-hover: #006168;
-  --background-primary: #f7f7f7;
-  --background-secondary: #dcdcdc;
-  --background-hover: #b8b8b8;
-  --header-color: #e1e1e1b5;
-  --border-color-primary: #939393;
-  --border-color-secondary: #434343;
+  --background-primary: #ffffff;
+  --background-secondary: #e8e8e8;
+  --background-hover: #dee1e1;
+  --header-color: #f3f6f6b5;
+  --border-color-primary: #9ca1a1;
+  --border-color-secondary: #818989;
 
   /* Sizes */
   --header-height: 3rem;
@@ -22,7 +22,7 @@
   --text-secondary: #dcdcdc;
   --text-tertiary: #a4a4a4;
   --text-opposite: #111111;
-  --accent-color: #009292;
+  --accent-color: #148787;
   --accent-color-hover: #009090;
   --background-primary: #111111;
   --background-secondary: #272727;

@@ -163,7 +163,7 @@ header a:hover {
 
 .fa-solid,
 .fa-brands {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 #header-content a:hover .fa-solid,

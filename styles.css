@@ -280,7 +280,7 @@ header a:hover {
   border: 1px solid var(--border-color-secondary);
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
   color: var(--text-primary);
 }
 

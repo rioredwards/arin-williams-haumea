@@ -14,7 +14,7 @@
   --border-color-secondary: #818989;
 
   /* Sizes */
-  --header-height: 3rem;
+  --header-height: 2.6rem;
 }
 
 [data-theme="dark"] {
@@ -24,10 +24,10 @@
   --text-opposite: #111111;
   --accent-color: #148787;
   --accent-color-hover: #009090;
-  --background-primary: #111111;
-  --background-secondary: #272727;
-  --background-hover: #434343;
-  --header-color: #000000b7;
+  --background-primary: #131313;
+  --background-secondary: #262727;
+  --background-hover: #2e3030;
+  --header-color: #303131d6;
   --border-color-primary: #3a3a3a;
   --border-color-secondary: #b8b8b8;
 }
